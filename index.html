@@ -42,6 +42,12 @@
                             90 min
                         </label>
                     </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="duration" value="failure">
+                            Until physically impossible
+                        </label>
+                    </div>
                     <div class="form-group">
                         <label for="sessionType">Session Type</label>
                         <select id="sessionType" class="form-control" name="session">
@@ -56,7 +62,18 @@
                     </div>
                     <div class="form-group">
                         <label for="fitnessLevel">Fitness Level</label><br>
-                        <input name="strength" id="fitnessLevel" type="range" value="0" max="3">
+                        
+                        <div class="range-wrap">
+                            <div class="range-value" id="rangeV"></div>
+                            <input name="fitnessLevel" id="range" type="range" value="1" min="1" max="4" class="custom-range">
+                        </div>
+                        
+                        <small id="sliderHelp" class="form-text text-muted">
+                            1 - Beginner &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            2 - Intermediate &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            3 - Advanced &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            4 - Very Advanced
+                        </small>
                     </div>
                     <button type="submit" class="btn btn-default">Submit</button>
                     <button type="reset" class="btn btn-default">Reset</button>
@@ -64,6 +81,9 @@
             </div>
         </div>
     </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" charset="utf-8"></script>
+    <script src="scripts/slidervalue.js" charset="utf-8"></script>
+    <script src="scripts/formhandler.js" charset="utf-8"></script>
     <script src="scripts/datastore.js" charset="utf-8"></script>
     <script src="scripts/gym.js" charset="utf-8"></script>
     <script src="scripts/main.js" charset="utf-8"></script>
