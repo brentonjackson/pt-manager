@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/css/bootstrap.min.css">
+</head>
+
+<body class="container">
+    <header>
+        <h1>PT Manager</h1>
+    </header>
+    <section>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form data-training-session="form">
+                    <div class="form-group">
+                        <label for="sessionType">Training Session</label>
+                        <input class="form-control" name="training" id="trainingType" autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="emailInput">Email</label>
+                        <input class="form-control" type="email" name="emailAddress" id="emailInput" value="" placeholder="big@goals.com">
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="duration" value="30min">
+                            30 min
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="duration" value="60min" checked>
+                            60 min
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="duration" value="90min">
+                            90 min
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label for="sessionType">Session Type</label>
+                        <select id="sessionType" class="form-control" name="session">
+                            <option value="">None</option>
+                            <option value="weights">Weight Training</option>
+                            <option value="cardio">Cardio</option>
+                            <option value="calisthenics">Calisthenics</option>
+                            <option value="yoga">Yoga</option>
+                            <option value="aquatic">Aquatic</option>
+                            <option value="basketball">Basketball</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="fitnessLevel">Fitness Level</label><br>
+                        <input name="strength" id="fitnessLevel" type="range" value="0" max="3">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                    <button type="reset" class="btn btn-default">Reset</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="scripts/datastore.js" charset="utf-8"></script>
+    <script src="scripts/gym.js" charset="utf-8"></script>
+    <script src="scripts/main.js" charset="utf-8"></script>
+
+</body>
+
+</html>
