@@ -13,10 +13,28 @@
         }
     }
     
+    CheckList.prototype.addClickHandler = function (fn) {
+        this.$element.on('click','input', function (event) {
+            var email = event.target.value;
+            this.removeRow(email);
+            fn(email);
+        }.bind(this));
+    };
+    
     CheckList.prototype.addRow = function (trainingSession) {
+        //remove existing rows with same email
+        this.removeRow(trainingSession.emailAddress);
+        
         var rowElement = new Row(trainingSession);
         
         this.$element.append(rowElement.$element);
+    };
+    
+    CheckList.prototype.removeRow = function (email) {
+        this.$element
+            .find('[value="' + email + '"]')
+            .closest('[data-training-session="checkbox"]')
+            .remove();
     };
     
     function Row(trainingSession) {
